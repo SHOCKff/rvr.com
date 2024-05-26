@@ -28,13 +28,13 @@ OPERATION=(sub,crd)=>{
             points.push(Element);
             i++;
            });
-        caluclate(points,crd);
+        approximauclate(points,crd);
    };
    sumcredits=(crd)=>{         //for credits sum
     for (let h=0;h<crd.length;h++){ sm+=crd[h]};
         return sm;
    };
-   caluclate=(points,crd)=>{
+   approximauclate=(points,crd)=>{
     console.log(points)//derived for checking...
     console.log(crd)
     let j=0,sum=0;sm=0;total=0;
@@ -47,12 +47,15 @@ OPERATION=(sub,crd)=>{
     total=sum/sumofcredits
     console.log(total);
     let res=document.getElementById("res");
-    res.innerHTML=`<p>CGPA=<output>${total}</output><p><P>Approximatioin</P>`
+    res.innerHTML=`<p>CGPA=<output>${total}</output><p><P>Approximation</P>`
     i=0,j=0,sum=0,sm=0,total=0; //CLEARING...
     for(let i=0;i<crd.length;i++)
        {
            points.pop()
        }
+       // Scroll to the bottom of the page
+       window.scrollBy(0, 9999);
+
   }
   }
 let button=document.getElementById("b1");
